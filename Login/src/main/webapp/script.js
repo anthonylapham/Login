@@ -5,9 +5,14 @@ $(document).ready(function(){
 	
 	$("#register-form").hide();
 	
+	$('#newUser').click(function(event){
+		event.preventDefault();
+		$("#register-form").show();
+	});
+	
 	 $.getJSON(apiURL, function(data) {
       console.log(data);
-	  if(data.holidays.weekday.date.name = "Thursday"){
+	  if(data.holidays.weekday.date.name = "Saturday"){
 		document.body.style.backgroundColor = rgb(20, 65, 37);
 	}
 	
