@@ -7,6 +7,7 @@ $(document).ready(function(){
 	
 	$('#newUser').click(function(event){
 		event.preventDefault();
+		$('#login-form').hide();
 		$("#register-form").show();
 	});
 	
