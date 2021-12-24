@@ -11,6 +11,11 @@ $(document).ready(function(){
 		$("#register-form").show();
 	});
 	
+	$('#register-form-submit').click(function(){
+		$('register-form').hide();
+		$('login-form').show();
+	});
+	
 	 $.getJSON(apiURL, function(data) {
       console.log(data);
 	  if(data.holidays.weekday.date.name = "Saturday"){

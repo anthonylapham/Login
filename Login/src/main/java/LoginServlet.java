@@ -34,7 +34,11 @@ public class LoginServlet extends HttpServlet {
 		String getUsername = request.getParameter("userNameRegister");
 		String getEmail = request.getParameter("emailRegister");
 		String getPassword = request.getParameter("passwordRegsiter");
-		String getRepeatPasswrod = request.getParameter("passwordRepeat");
+		String getRepeatPassword = request.getParameter("passwordRepeat");
+		
+		if(!getPassword.equals(getRepeatPassword)) {
+			writer.println("<h2>Passwords must match. Please try again!</h2>");
+		}
 		
 		writer.println("<h2>Thank you for Registering!</h2>");
 		writer.println("<h3>Please use the following information to Login:</h3>");
